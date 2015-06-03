@@ -1,10 +1,8 @@
 var list = [];
-var toDoList = function(name, action){
+var toDoList = function(name){
     this.name = name;
-    this.action = action;
-    this.addToList = function(this.name){
+    this.addToList = function(){
         list.push(this.name);
-
         console.log(this.name + ' was created successful!');
     };
     this.delFromList = function(){
@@ -13,5 +11,5 @@ var toDoList = function(name, action){
     };
 };
 
-var things = new toDoList(name, act);
-things.name = document.getElementById('text').onclick(things.addToList);
+var things = new toDoList(thing);
+things.thing = document.getElementById('text').onclick(things.addToList);
