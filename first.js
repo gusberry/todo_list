@@ -1,15 +1,15 @@
-var list = [];
 var toDoList = function(name){
     this.name = name;
+    this.func = function(){
+        document.getElementById("text").innerHTML = "<li>"+this.name+"</li>>";
+    };
     this.addToList = function(){
-        list.push(this.name);
-        console.log(this.name + ' was created successful!');
+        document.getElementById('text').addEventListener("click", this.func());
     };
     this.delFromList = function(){
-        delete list[this.name];
-        console.log(this.name + ' was deleted successful!');
+        document.getElementsByTagName("li").removeEventListener('click', this.func());
     };
 };
 
-var things = new toDoList(thing);
-things.thing = document.getElementById('text').onclick(things.addToList);
+var things = new toDoList();
+things.addToList();
