@@ -13,12 +13,31 @@
                 <input id="text" type="text">
             </li>
             <li>
-                <input type="submit" value="Submit">
+                <input id="btn" type="button" value="Submit">
             </li>
+        </ul>
+        <ul>
+            <li id="now"></li>
         </ul>
 
 
     </div>
-    <script type="text/javascript" language="JavaScript" src="ToDo_list.js"></script>
+    <script>
+        document.getElementById("btn").addEventListener("click", addToList);
+        var list = [];
+        function addToList(){
+            list.push(document.getElementById("now").innerHTML = document.getElementById("text"));
+        }
+
+        function stopListener() {
+            document.getElementById("btn").removeEventListener("click", addToList);
+        }
+
+        document.getElementById("btn").addEventListener("click", delFromList);
+
+        function delFromList(){
+            delete list[document.getElementById("now")];
+        }
+    </script>
 </body>
 </html>
