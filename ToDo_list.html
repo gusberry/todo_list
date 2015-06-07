@@ -16,8 +16,8 @@
                 <input id="btn" type="button" value="Submit">
             </li>
         </ul>
-        <ul>
-            <li id="now"></li>
+        <ul id="now">
+
         </ul>
 
 
@@ -25,18 +25,19 @@
     <script>
         document.getElementById("btn").addEventListener("click", addToList);
         var list = [];
+        var text = "<li id="+"data"+">"+document.getElementById("text")+"</li>";
         function addToList(){
-            list.push(document.getElementById("now").innerHTML = document.getElementById("text"));
+            list.push(document.getElementById("now").innerHTML += text);
         }
 
         function stopListener() {
             document.getElementById("btn").removeEventListener("click", addToList);
         }
 
-        document.getElementById("btn").addEventListener("click", delFromList);
+        document.getElementById("list").addEventListener("click", delFromList);
 
         function delFromList(){
-            delete list[document.getElementById("now")];
+            delete list[document.getElementById("list")];
         }
     </script>
 </body>
