@@ -1,10 +1,16 @@
 ul {
     list-style: none;
 }
-li {
+.listClass > li {
     display: inline;
     margin-right: 100px;
 }
 #text {
     width: 300px;
+}
+#data{
+    margin: 10px;
+    padding: 5px;
+    border: 2px solid black;
+    width: auto;
 }
