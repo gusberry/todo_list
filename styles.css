@@ -21,7 +21,7 @@ body{
 #list{
     margin: auto;
     width: 600px;
-    : 200px;
+    margin-top: 200px;
 }
 #text{
     width: 450px;
