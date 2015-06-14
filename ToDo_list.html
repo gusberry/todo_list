@@ -7,44 +7,15 @@
 </head>
 <body>
     <div id="list">
-        <ul class="listClass">
-            <li>
-                <label for="text">Write your wish here: </label>
-                <input id="text" type="text">
-            </li>
-            <li>
-                <input id="btn" type="button" value="Add">
-            </li>
-        </ul>
-        <ul id="now">
-
-        </ul>
+        <div class="form">
+            <label for="text">Your ToDo's </label>
+            <input id="text" type="text" placeholder="type text here" autofocus>
+            <input id="btn" type="button" value="Add">
+        </div>
+        <ul id="now"></ul>
 
 
     </div>
-    <script>
-        document.getElementById("btn").addEventListener("click", addToList);
-        var list = [];
-        var newList = document.getElementById("now");
-
-        function addToList(){
-            var text = document.getElementById("text");
-            var liElem = document.createElement("li");
-            var liText = liElem.appendChild(document.createTextNode(text.value));
-            liElem.appendChild(liText);
-            newList.appendChild(liElem);
-            list.push(liText);
-            for (var i = 0; i<=newList.children.length; i++){
-                var idToLi = newList.children[i].createAttribute("id");
-                idToLi.value = "todo_"+i;
-            }
-        }
-
-        newList.addEventListener("click", delFromList);
-
-        function delFromList(){
-            newList.removeChild(newList.childNodes[document.getElementById(this).id]);
-        }
-    </script>
+    <script type="application/javascript" src="ToDo_list.js"></script>
 </body>
 </html>
