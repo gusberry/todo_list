@@ -18,7 +18,7 @@ function addToList(){
     text.value = "";
     text.focus();
 }
-
+//test
 function delFromList(){
     newList.removeChild(this);
 }
